@@ -18,7 +18,7 @@ namespace Nagels_test
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            //HexDecode test = new HexDecode(hex1);
+
 
 
         }
@@ -45,8 +45,9 @@ namespace Nagels_test
             foreach (string i in firstSplit)
             {
                 char[] temp = i.ToCharArray();
-                data.Add(temp[0]);
-                data.Add(temp[1]);
+                foreach(char x in temp) { data.Add(x); }
+                
+
             }
 
             Splitter();
